@@ -1,0 +1,25 @@
+general:
+  artifacts:
+    - "app/build/outputs/apk/app-release.apk"
+    - "app/build/outputs/apk/app-debug.apk"
+
+machine:
+  java:
+    version: openjdk7
+  environment:
+    ANDROID_HOME: /usr/local/android-sdk-linux
+
+dependencies:
+  override:
+    - echo y | android update sdk --no-ui --filter "android-23,build-tools-23.0.1"
+
+test:
+  override:
+    - echo "This is Dummy Section."
+
+deployment:
+  master:
+    branch: master
+    commands:
+    - ./gradlew assembleRelease
+    - ./gradlew assembleDebug

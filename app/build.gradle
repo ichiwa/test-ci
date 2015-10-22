@@ -12,8 +12,8 @@ android {
         applicationId "com.example.myapplication"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 439
+        versionName "1.0.1"
     }
     signingConfigs {
         debug {
@@ -29,8 +29,8 @@ android {
         debug {
             debuggable true
             zipAlignEnabled true
-            //applicationIdSuffix ".debug"
-            //versionNameSuffix '-dev'
+            applicationIdSuffix ".debug"
+            versionNameSuffix '-dev'
         }
         alpha {
             debuggable true
@@ -38,6 +38,8 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
+            applicationIdSuffix ".alpha"
+            versionNameSuffix '-alpha'
         }
         release {
             debuggable false
