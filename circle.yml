@@ -15,7 +15,7 @@ dependencies:
 
 test:
   override:
-    - echo "This is Dummy Section."
+    - echo "This is Dummy Section and commit test"
 
 deployment:
   master:
