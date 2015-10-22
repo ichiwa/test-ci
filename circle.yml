@@ -18,6 +18,11 @@ test:
     - echo "This is Dummy Section and commit test"
 
 deployment:
+  test:
+    branch: development
+    commands:
+    - ./gradlew assembleAlpha
+    - ./gradlew assembleDebug
   master:
     branch: master
     commands:
