@@ -18,12 +18,14 @@ test:
     - echo "This is Dummy Section and commit test"
 
 deployment:
+
   test:
     branch: development
     commands:
     - ./gradlew assembleAlpha
     - ./gradlew assembleDebug
     - curl -F "file=@app/build/outputs/apk/app-alpha.apk" -F "token=4a3861296a985dfba3694bb8a53c3fbd37957c58" -F "message=DeployGate" https://deploygate.com/api/users/ichiwa/apps
+
   master:
     branch: master
     commands:
